@@ -16,7 +16,8 @@ todolist.append(newli);
 todoinput.value="";
 todolist.addEventListener("click",(e)=>{
     if(e.target.classList.contains("remove")){
-        
+      const targetedli=e.target.parentNode.parentNode;
+      targetedli.remove();  
     }
     if(e.target.classList.contains("done")){
 const lispan=e.target.parentNode.previousElementSibling;
